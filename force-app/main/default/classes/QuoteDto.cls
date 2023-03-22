@@ -20,6 +20,12 @@ public with sharing class QuoteDto extends BaseDto {
     QuoteDto qdto = new QuoteDto(quote1);
     return qdto;
   }
+  
+  @AuraEnabled(cacheable=true)
+  public static Quote__c getAmountandCurr(String quoteId){
+    Quote__c quote1 = [select id, CurrencyIsoCode, TotalQuotedAmount__c from Quote__c where id =: quoteId limit 1 ]; 
+    return   quote1;
+  }
 
   @AuraEnabled
   public static String updateQuote(Quote__c quoteUpdate){

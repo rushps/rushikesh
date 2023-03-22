@@ -7,7 +7,6 @@ import { LightningElement, api, wire } from "lwc";
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 import getQuoteDetails from '@salesforce/apex/QuoteDto.getQuoteDetails';
 import updateQuote from '@salesforce/apex/QuoteDto.updateQuote';
-import { RefreshEvent } from 'lightning/refresh';
 
 
 export default class EditQuote extends LightningElement {

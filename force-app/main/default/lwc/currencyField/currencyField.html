@@ -1,0 +1,8 @@
+<template>
+    <div if:true={showEdit}>
+        <lightning-input type="number" label="Amount" value={amountField} ></lightning-input>
+    </div>
+    <div if:false={showEdit}>
+        <lightning-input  readonly type="number" label="Amount" value={amountField} onclick={handleData}></lightning-input><span class="slds-float_right slds-is-relative" style="margin-top: -3%;   margin-right: 1%;">{currISOfield}</span>
+    </div>
+</template>
